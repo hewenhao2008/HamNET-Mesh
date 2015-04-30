@@ -185,7 +185,8 @@ end
 </tr></thead><tr style="background-color: #f1f6fa; color:#000099;"><td><center><?
 local f=io.popen("iw list|grep -e RTS|cut -f2 -d:")
 rts=trim(f:read("*a"))
-if rts~=nil then
+rlen=string.len(rts)
+if rlen~=0 then
 io.write(rts)
 else
 io.write("off")
@@ -193,7 +194,8 @@ end
 io.write("</center></td><td colspan=2><center>")
 local f=io.popen("iw list|grep -e Frag|cut -f2 -d:")
 cts=trim(f:read("*a"))
-if cts~=nil then
+clen=string.len(cts)
+if clen~=0 then
 io.write(cts)
 else
 io.write("off")

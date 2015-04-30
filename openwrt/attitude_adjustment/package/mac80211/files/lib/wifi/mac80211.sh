@@ -645,7 +645,7 @@ config wifi-device  radio$devidx
 	option short_premable 0
 	option beacon_int 222
 	option rts 250
-	option frag 512
+#	option frag 512
 	option noscan 0 
 	option hwmode	11bg
 #	option hwmode	11${mode_band}

@@ -27,8 +27,13 @@ comment="HamNET Node 2362 MHz BW=5 MHz"
 -- Symbol for WLNA HamNET Node
 symbol="88"
 
--- becaon 
-bikon=call..">APRS,TCPIP*:;"..call.."   *111111z"..lat.."8"..lon.."8"..comment.."\r\n"
+-- Object name must have lenght 9 chars
+lcall=string.len(call)
+nsp=9-lcall
+oname=call..string.rep(" ",nsp)
+
+-- becaon
+bikon=call..">APRS,TCPIP*:;"..oname.."*111111z"..lat.."8"..lon.."8"..comment.."\r\n"
 
 -- login to APRS Server
 login="user "..call.." pass "..passcode.." v1.0 HamNET-Mesh\r\n"
