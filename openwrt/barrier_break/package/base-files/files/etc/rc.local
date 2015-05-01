@@ -10,4 +10,7 @@
 echo 1 >/sys/kernel/debug/ieee80211/phy0/ath9k/ani 
 (sleep 10; wifi start) &
 
+# for startup ntpclient we need up iface
+ifup lan
+
 exit 0
