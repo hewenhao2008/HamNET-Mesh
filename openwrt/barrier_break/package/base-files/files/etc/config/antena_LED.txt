@@ -1,9 +1,19 @@
-'option antenna'  - dotyczy  NS2  i WA5210G:
+Ustawiania anteny w /etc/config/wireless dla NS2  i WA5210G:
+-------------------------------------------------------------
+
+option txantenna x 
+option rxantenna x
+
+gdzie x ma wartosc:
 
   '1' -  EXTERNAL,  '2' -  VERTICAL, '3' - HORIZONTAL
 
 
+=====================================================
+LED w /etc/config/system:
+
 -----------------------------------------------------
+
 Zmiana w  pliku system  - dotyczy NS2
  
     po lini  "  option max '30'   " wykonac taki zapis

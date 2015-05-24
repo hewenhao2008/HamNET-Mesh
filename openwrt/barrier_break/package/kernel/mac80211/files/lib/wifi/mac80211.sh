@@ -109,10 +109,10 @@ config wifi-device  radio$devidx
 	option beacon_int 222
 	option rts 250
 #	option frag 512
-#	option hwmode	11bg
+	option hwmode	11g
 	option noscan	0
 #	option hwmode	11${mode_band}
-	option txpower 20
+	option txpower 18
 $dev_id
 # $ht_capab
 	# REMOVE THIS LINE TO ENABLE WIFI:
